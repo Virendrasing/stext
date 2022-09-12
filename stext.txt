@@ -11,8 +11,8 @@ services:
       ZOOKEEPER_CLIENT_PORT: 2181
       ZOOKEEPER_TICK_TIME: 2000
     volumes:
-      - "/home/agora/iu/idap/confluent/zk/data:/var/lib/zookeeper/data"
-      - "/home/agora/iu/idap/confluent/zk/log:/var/lib/zookeeper/log"
+      - "/home/ubuntu/kafka/zk/data:/var/lib/zookeeper/data"
+      - "/home/ubuntu/kafka/zk/log:/var/lib/zookeeper/log"
 
 
 
@@ -45,8 +45,8 @@ services:
       CONFLUENT_METRICS_ENABLE: 'true'
       CONFLUENT_SUPPORT_CUSTOMER_ID: 'anonymous'
     volumes:
-      - "/home/agora/iu/idap/confluent/kafka/data"
-      - "/home/agora/iu/idap/confluent/kafka/log"
+      - "/home/ubuntu/kafka/kafka-1/data"
+      - "/home/ubuntu/kafka/kafka-1/log"
 
 
 
@@ -100,4 +100,4 @@ services:
       CONNECT_PLUGIN_PATH: "/usr/share/java,/usr/share/confluent-hub-components,/etc/kafka-connect/jars"
       CONNECT_LOG4J_LOGGERS: org.apache.zookeeper=ERROR,org.I0Itec.zkclient=ERROR,org.reflections=ERROR,io.confluent.connect.mqtt.MqttSourceTask=DEBUG
     volumes:
-            - "/home/agora/iu/idap/kafka-plugins:/etc/kafka-connect/jars"
+            - "/home/ubuntu/kafka/kafka-plugins:/etc/kafka-connect/jars"
