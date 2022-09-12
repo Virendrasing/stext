@@ -16,7 +16,7 @@ services:
 
 
 
- broker:
+  broker:
     image: confluentinc/cp-server:5.5.3
     hostname: broker
     container_name: broker
@@ -50,7 +50,7 @@ services:
 
 
 
- schema-registry:
+  schema-registry:
     image: confluentinc/cp-schema-registry:5.5.3
     hostname: schema-registry
     container_name: schema-registry
@@ -65,7 +65,7 @@ services:
 
 
 
- connect:
+  connect:
     image: confluentinc/cp-kafka-connect:5.5.3
     hostname: connect
     container_name: connect
